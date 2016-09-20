@@ -34,11 +34,11 @@ app.post('/webhook/', function (req, res) {
 		let sender = event.sender.id
 		if (event.message && event.message.text) {
 			let text = event.message.text
-			if (text === 'Sannah') {
+			if (text === 'CNBC') {
 				sendGenericMessage(sender)
 				continue
 			}
-			sendTextMessage(sender, "Hi Sender, CNBC Africa is working on a new news chatbot. Please bear with us as we test this beta." + text.substring(0, 200))
+			sendTextMessage(sender, "Hi Quinton, CNBC Africa is working on a new news chatbot. Please bear with us as we test this beta." + text.substring(0, 200))
 		}
 		if (event.postback) {
 			let text = JSON.stringify(event.postback)
